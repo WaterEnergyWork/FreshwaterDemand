@@ -15,16 +15,16 @@ for i=1:size(NumberPowerPlant,1)
 % 'Node' connects the power plant data with country data
             if TypeOfFuel(NumberPowerPlant==i)==1
             FLHcoeff=FlhCoal2015(NodeNumberFLH==NodeTotal(NumberPowerPlant==i));
-            FLHcoeff(isnan(FLHcoeff))=0; %for the case is data is not available    
+            FLHcoeff(isnan(FLHcoeff))=0; %for the case if data is not available    
            elseif TypeOfFuel(NumberPowerPlant==i)==2
             FLHcoeff=FlhGT2015(NodeNumberFLH==NodeTotal(NumberPowerPlant==i));
-            FLHcoeff(isnan(FLHcoeff))=0; %for the case is data is not available    
+            FLHcoeff(isnan(FLHcoeff))=0; %for the case if data is not available    
            elseif TypeOfFuel(NumberPowerPlant==i)==3
             FLHcoeff=FlhNuclear2015(NodeNumberFLH==NodeTotal(NumberPowerPlant==i));
-            FLHcoeff(isnan(FLHcoeff))=0; %for the case is data is not available    
+            FLHcoeff(isnan(FLHcoeff))=0; %for the case if data is not available    
            elseif TypeOfFuel(NumberPowerPlant==i)==4
             FLHcoeff=FlhOil2015(NodeNumberFLH==NodeTotal(NumberPowerPlant==i));
-            FLHcoeff(isnan(FLHcoeff))=0; %for the case is data is not available    
+            FLHcoeff(isnan(FLHcoeff))=0; %for the case if data is not available    
             end
 
 %Extraction of water withdrawal factors for the specific thermal power plant, this code uses a table created by the authors, based on Macknick et al.(2012)
